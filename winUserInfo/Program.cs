@@ -15,7 +15,7 @@ namespace winUserInfo
             foreach (String arg in args)
             {
                 if (arg.ToUpper().Equals("-V") ||
-                    arg.ToUpper().Equals("-VERSION")
+                    arg.ToUpper().Equals("--VERSION")
                     )
                 {
                     showVersion = true;
