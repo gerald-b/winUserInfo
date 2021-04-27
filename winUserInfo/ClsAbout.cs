@@ -5,7 +5,7 @@ using System.Text;
 
 using System.Reflection;
 
-namespace uptime
+namespace winUserInfo
 {
     class ClsAbout
     {
