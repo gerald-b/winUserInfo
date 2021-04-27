@@ -10,6 +10,17 @@ namespace winUserInfo
     {
         static void Main(string[] args)
         {
+            bool showVersion = false;
+
+            foreach (String arg in args)
+            {
+                if (arg.ToUpper().Equals("-V") ||
+                    arg.ToUpper().Equals("-VERSION")
+                    )
+                {
+                    showVersion = true;
+                }
+            }
         }
     }
 }
