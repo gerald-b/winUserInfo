@@ -35,7 +35,17 @@ namespace winUserInfo
 
         private static string getVersionTxt()
         {
-            throw new NotImplementedException();
+            ClsAbout about = new ClsAbout();
+
+            String msg = String.Empty;
+            msg += about.getProductName() + " - v" + about.getVersion();
+            msg += Environment.NewLine;
+            msg += "Author(s): " + about.getCompany();
+            msg += Environment.NewLine;
+            msg += "License: " + about.getCopyright();
+            msg += Environment.NewLine;
+
+            return msg;
         }
     }
 }
