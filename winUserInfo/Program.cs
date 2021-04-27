@@ -11,6 +11,8 @@ namespace winUserInfo
         static void Main(string[] args)
         {
             bool showUserName = false;
+            bool showUserDomain = false;
+
             foreach (String arg in args)
             {
                 if (arg.ToUpper().Equals("-U") ||
@@ -19,6 +21,13 @@ namespace winUserInfo
                 {
                     showUserName = true;
                 }
+
+                if (arg.ToUpper().Equals("-UD") ||
+                    arg.ToUpper().Equals("--USER-DOMAIN")
+                    )
+                {
+                    showUserDomain = true;
+                }
             }
 
             String msg = String.Empty;
@@ -26,7 +35,14 @@ namespace winUserInfo
 
             if (showUserName)
             {
-                msg += "Username: " + Environment.UserName;
+                msg += "Username:\t" + Environment.UserName;
+                msg += Environment.NewLine;
+            }
+
+            if (showUserDomain)
+            {
+                msg += "Userdomain:\t" + Environment.UserDomainName;
+                msg += Environment.NewLine;
             }
 
             msg += Environment.NewLine;
