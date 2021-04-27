@@ -21,6 +21,21 @@ namespace winUserInfo
                     showVersion = true;
                 }
             }
+
+            String msg = String.Empty;
+
+            if (showVersion)
+            {
+                msg = getVersionTxt();
+                Console.WriteLine(msg);
+                return;
+            }
+
+        }
+
+        private static string getVersionTxt()
+        {
+            throw new NotImplementedException();
         }
     }
 }
